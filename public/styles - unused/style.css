@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;800&display=swap");
+:root {
+  --primary: #18727d;
+  --secondary: #b4dadb;
+  --white: #fff;
+  --dark-gunmetal: #545454;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.primary-button {
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 0.5em 2em;
+  border-radius: 5px;
+}
+
+/* NavBar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+}
+
+.nav-login-register-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo-img {
+  transform: scale(-1, 1);
+  width: 3rem;
+  display: block;
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 31px;
+}
+
+/* End NavBar */
+
+/* Hero */
+
+.hero-img-container {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: left;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: calc(100% - 7px);
+}
+
+.hero-container {
+  width: 100%;
+  position: relative;
+}
+.hero-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 0;
+  margin-right: 1em;
+  width: 30%;
+  gap: 1em;
+  top: 10vh;
+}
+p.hero-text {
+  font-size: 2em;
+  text-align: right;
+  color: var(--white);
+}
+.hero-button {
+  align-self: flex-end;
+}
+/* End Hero */
+
+/* Partnership */
+
+.partnership-container {
+  margin-top: 2em;
+}
+
+.partnership-heading {
+  color: var(--primary);
+  text-align: center;
+}
+
+.company-container {
+  display: flex;
+  padding: 5em;
+  justify-content: center;
+  gap: 5em;
+}
+
+.company-img {
+  width: 100px;
+}
+
+/* End Partnership */
+
+@media (max-width: 1180px) {
+  p.hero-text {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 650px) {
+  .company-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
