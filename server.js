@@ -1,3 +1,4 @@
+// server (built my Emily when she created the landing page)
 const express = require("express");
 const path = require("path");
 
