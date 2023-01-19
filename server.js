@@ -1,4 +1,5 @@
 // server (built my Emily when she created the landing page)
+//DB connections made by Rahul
 var express = require("express");
 const path = require("path");
 
