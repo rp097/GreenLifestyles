@@ -1,4 +1,6 @@
 // server (built my Emily when she created the landing page)
+
+
 //DB connections made by Rahul
 var express = require("express");
 const path = require("path");
@@ -25,6 +27,9 @@ const createCollection = (collectionName) => {
   })
 }
 
+
+
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -33,13 +38,16 @@ app.use(cors())
 /*app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/index.html"));
 });*/
-
-app.get('/api/projects',(req,res) => {
+app.get('/api/projects/',(req,res) => {
+  //alert(req.params.user);
+  
   getProjects((err,result) => {
       if(err) {
           res.json({statusCode: 400, message: err})
+          alert(err);
       }
       else {
+          alert(result);
           res.json({statusCode: 200, message:"Success", data: result})
       }
   })
@@ -75,3 +83,4 @@ app.listen(port,()=>{
   console.log("Server started at http://localhost:" + port)
   createCollection("users")
 })
+

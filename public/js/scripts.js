@@ -1,10 +1,31 @@
-/*const getProjects = () => {
-    $.get('/api/projects',(response) => {
+
+const hostLoginSubmit = () => {
+    let hostLoginData = {};
+    hostLoginData.email = $('#hostemail').val();
+    hostLoginData.pw = $('#hostpw').val();
+    console.log("Email and Password: ", hostLoginData);
+    //alert("login");
+    $.get('/api/projects/',(response) => {
+         //alert("Inside get");
         if(response.statusCode==200){
-            addCards(response.data);
+            //alert("hostloginsubmit- success response callback");
+            //alert(response.data[0].email);
+            if(response.data.find(x=> x.email == hostLoginData.email) == undefined)
+                alert("User not found!");
+            else if(response.data.find(x=> x.pw == hostLoginData.pw) != undefined)
+            {
+                alert("Login Successful!");
+                window.location = "/index.html";
+               // window.location = "../index.html";
+                //window.location = "/public/index.html";
+            }  
+            else
+                alert("Password Incorrect!");
         }
-    })
-}*/
+    });
+   
+}
+
 
 const hostFormSubmit = () => {
     let hostFormData = {};
@@ -16,7 +37,12 @@ const hostFormSubmit = () => {
     hostFormData.bio = $('#bio').val();
     console.log("Form Data Submitted: ", hostFormData);
     addProjectToApp(hostFormData);
+
 }
+
+
+
+
 
 //ajax function...​
 const addProjectToApp = (project) => {
@@ -35,7 +61,11 @@ $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#hostFormSubmit').click(()=>{
         hostFormSubmit();
-    })
+    });
+    $('#hostLoginSubmit').click((e)=>{
+        e.preventDefault();
+        hostLoginSubmit();
+    });
     //getProjects();
     $('.modal').modal();
   });
