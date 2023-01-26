@@ -1,143 +1,190 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
-    <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link href="styles.css" rel="stylesheet" />
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      #ngo_head{
-        text-align: center;
-      }
-      #hs{
-        padding-top: 30%;
-        padding-left: 8%;
-      }
-      #vs{
-        padding-top: 30%;
-        padding-right: 2%;
-      }
-     
-      
-    </style>
-  </head>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <body>
-    <div class="container">
-      <!-- Page Content goes here -->
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #ngo_head {
+      text-align: center;
+    }
 
-      <div class="row">
-        <!-- Modal Trigger -->
-        <div id ="hs" class = "col s6">
-          
-        <a
-          class="col s4 waves-effect waves-light btn-large modal-trigger"
-          href="#modal1"
-          >
+    #hs {
+      padding-top: 30%;
+      padding-left: 8%;
+    }
+
+    #vs {
+      padding-top: 30%;
+      padding-right: 2%;
+    }
+
+    #formSubmit2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Page Content goes here -->
+
+    <div class="row">
+      <!-- Modal Trigger -->
+      <div id="hs" class="col s6">
+
+        <a class="col s4 waves-effect waves-light btn-large modal-trigger" href="#modal1">
           <i class="material-icons right">chevron_right</i>
-          
+
           Host SignUp</a>
-          
-        </div>
-        <!--<a
+
+      </div>
+      <!--<a
           class="col s4 waves-effect waves-light btn-large"
           href="hostsignup.html"
           ><i class="material-icons right">chevron_right</i>Host SignUp</a
         > -->
-        
-        <div id="modal1" class="modal modal-fixed-footer">
-          <div class="modal-header"><h4 id="ngo_head" class="teal lighten -2">NGO Sign Up</h4></div>
-          <div class="row modal-content">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input
-                    placeholder="Organisation Name"
-                    id="name"
-                    type="text"
-                    class="validate"
-                    required
-                  />
-                  
-                </div>
-                <div class="input-field col s6">
-                  <input id="email" type="text" class="validate" required/>
-                  <label for="email">Email ID</label>
-                </div>
+
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-header">
+          <h4 id="ngo_head" class="teal lighten -2">NGO Sign Up</h4>
+        </div>
+        <div class="row modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Organisation Name" id="name" type="text" class="validate" required />
+
+              </div>
+              <div class="input-field col s6">
+                <input id="email" type="text" class="validate" required />
+                <label for="email">Email ID</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="pw" placeholder="Password(min. 8 characters)" type="password" minlength="8" class="validate"
+                  required />
+              </div>
+
+              <div class="input-field col s6">
+                <input id="cnum" type="text" class="validate" />
+                <label for="cnum">Contact Number</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="address" type="text" class="validate" />
+                <label for="address">Address</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="bio" type="text" class="validate" />
+                <label for="bio">Bio</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="hostFormSubmit">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+      <div id="vs" class="col s6">
+
+        <a class="col s4 push-s4 waves-effect waves-light btn-large  modal-trigger" href="#modal2"><i
+            class="material-icons right">chevron_right</i>Volunteer SignUp</a>
+
+      </div>
+
+      <div id="modal2" class="modal modal-fixed-footer">
+        <div class="modal-header">
+          <h4 id="ngo_head" class="teal lighten -2">
+            Volunteer Sign Up</h4>
+        </div>
+
+        <div class="row modal-content">
+          <form class="col s12" action="#" onsubmit="SignupVolunteer()">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Volunteer Name" id="Volunteername" type="text" class="validate" required />
+
+              </div>
+              <div class="input-field col s6">
+                <input id="Volunteeremail" type="text" class="validate" required />
+                <label for="Volunteeremail">Email ID</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="Volunteerpw" placeholder="Password(min. 8 characters)" type="password" minlength="8"
+                  class="validate" required />
               </div>
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="pw" placeholder="Password(min. 8 characters)" type="password" minlength="8" class="validate" required/>
-                  
-                </div>
-                <div class="input-field col s6">
-                  <input id="cnum" type="text" class="validate" />
-                  <label for="cnum">Contact Number</label>
+                  <input id="Date of Birth" type="date" class="validate" />
+                  <label for="Date of Birth">Date of Birth</label>
                 </div>
               </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="address" type="text" class="validate" />
-                  <label for="address">Address</label>
-                </div>
+              <div class="input-field col s6">
+                <input id="Volunteercnum" type="text" class="validate" />
+                <label for="Volunteercnum">Contact Number</label>
               </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="bio" type="text" class="validate" />
-                  <label for="bio">Bio</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12 center-align">
-                  <button class="btn waves-effect waves-light" type="submit" name="action" id="hostFormSubmit">Submit
-                    <i class="material-icons right">send</i>
-                  </button>
-                </div>
-              </div>
-            </form>
+            </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col s12 center-align">
+            <button id="formSubmit2" class="btn waves-effect waves-light" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
           </div>
         </div>
-
-        
-        
-        <div id="vs" class = "col s6">
-        <a class="col s4 push-s4 waves-effect waves-light btn-large"
-          ><i class="material-icons right">chevron_right</i>Volunteer SignUp</a
-        >
-        </div>
-        
+        </form>
       </div>
-      </div>
-    
-      <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"
-      ></script>
-  
-      <!-- Compiled and minified JavaScript -->
-  
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-      <script src="js/scripts.js"></script>
-      
-      
-
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
     </div>
-  </body>
+
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="js/scripts.js"></script>
+
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  </div>
+</body>
+
 </html>
