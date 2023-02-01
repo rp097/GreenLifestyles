@@ -26,6 +26,31 @@ const hostLoginSubmit = () => {
    
 }
 
+const volunteerLoginSubmit = () => {
+    let volunteerLoginData = {};
+    volunteerLoginData.email = $('#volunteeremail').val();
+    volunteerLoginData.pw = $('#volunteerpw').val();
+    console.log("Email and Password: ", volunteerLoginData);
+    //alert("login");
+    $.get('/api/projects/', (response) => {
+        //alert("Inside get");
+        if (response.statusCode == 200) {
+            //alert("hostloginsubmit- success response callback");
+            //alert(response.data[0].email);
+            if (response.data.find(x => x.email == volunteerLoginData.email) == undefined)
+                alert("User not found!");
+            else if (response.data.find(x => x.pw == volunteerLoginData.pw) != undefined) {
+                alert("Login Successful!");
+                window.location = "/index.html";
+                // window.location = "../index.html";
+                //window.location = "/public/index.html";
+            }
+            else
+                alert("Password Incorrect!");
+        }
+    });
+
+}
 
 const hostFormSubmit = () => {
     let hostFormData = {};
