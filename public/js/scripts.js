@@ -28,8 +28,8 @@ const hostLoginSubmit = () => {
 
 const volunteerLoginSubmit = () => {
     let volunteerLoginData = {};
-    volunteerLoginData.email = $('#volunteeremail').val();
-    volunteerLoginData.pw = $('#volunteerpw').val();
+    volunteerLoginData.email = $('#Volunteeremail').val();
+    volunteerLoginData.pw = $('#Volunteerpw').val();
     console.log("Email and Password: ", volunteerLoginData);
     //alert("login");
     $.get('/api/projects/', (response) => {
@@ -65,7 +65,17 @@ const hostFormSubmit = () => {
 
 }
 
+const formSubmit2 = () => {
+    let volData = {};
+    volData.name = $('#Volunteername').val();
+    volData.email = $('#Volunteeremail').val();
+    volData.pw = $('#Volunteerpw').val();
+    volData.dob = $('#Date of Birth').val();
+    volData.cnum = $('#Volunteercnum').val();
+    console.log("Form Data Submitted: ", volData);
+    addProjectToApp(volData);
 
+}
 
 
 
@@ -82,16 +92,23 @@ const addProjectToApp = (project) => {
     })
 }
 
-$(document).ready(function(){
+
+  $(document).ready(function () {
     $('.materialboxed').materialbox();
-    $('#hostFormSubmit').click(()=>{
+    $('#hostFormSubmit').click(() => {
         hostFormSubmit();
     });
-    $('#hostLoginSubmit').click((e)=>{
+    $('#hostLoginSubmit').click((e) => {
         e.preventDefault();
         hostLoginSubmit();
     });
+    $('#formSubmit2').click(() => {
+        formSubmit2();
+    });
+    $('#volunteerLoginSubmit').click((e) => {
+        e.preventDefault();
+        volunteerLoginSubmit();
+    });
     //getProjects();
     $('.modal').modal();
-  });
-       
+});  

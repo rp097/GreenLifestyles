@@ -33,11 +33,11 @@ const createCollection = (collectionName) => {
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors())
+app.use(cors());
 
-// app.get("/", function (req, res) {
-//   res.sendFile(path.join(__dirname, "/index.html"));
-// });
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/index.html"));
+});
 app.get('/api/projects/',(req,res) => {
   //alert(req.params.user);
   
@@ -47,7 +47,7 @@ app.get('/api/projects/',(req,res) => {
           alert(err);
       }
       else {
-          alert(result);
+          // alert(result);
           res.json({statusCode: 200, message:"Success", data: result})
       }
   })
