@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Content</title>
+		<!-- Compiled and minified CSS -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: '#da373d',
+						},
+					},
+				},
+			};
+		</script>
+		<script src="js/index.js"></script>
+	</head>
+	<body class="teal darken-3 pl-80">
+		<!-- Navbar -->
+		<nav class="teal accent-1 flex items-center justify-between pr-9">
+			<div class="pl-9 w-40">
+				<input
+					placeholder="Search"
+					id="search"
+					type="text"
+					class="text-gray-600 materialize-textarea"
+				/>
+			</div>
+			<div class="flex items-center gap-3">
+				<i class="material-icons teal rounded-lg px-2 py-0 cursor-pointer"
+					>notifications</i
+				>
+				<img
+					src="../../images/profile.png"
+					width="60"
+				/>
+				<p
+					id="user-name"
+					class="teal-text cursor-pointer"
+				>
+					Emily Chin
+				</p>
+				<i class="material-icons teal cursor-pointer">arrow_drop_down</i>
+			</div>
+		</nav>
+
+		<!-- Side Nav -->
+		<ul
+			id="slide-out"
+			class="sidenav sidenav-fixed"
+		>
+			<li>
+				<div class="user-view">
+					<a
+						href="/"
+						class="flex flex-row items-center gap-2"
+					>
+						<img
+							src="../../images/logo.svg"
+							width="50px"
+							alt="logo"
+						/>
+						<p class="teal-text darken-3 font-bold text-2xl">GreenLifestyles</p>
+					</a>
+					<br />
+					<p class="darken-3 text-lg font-[500]">Main Menu</p>
+				</div>
+			</li>
+			<br />
+			<li>
+				<a href="/dashboard/profile">
+					<i class="teal-text darken-3 material-icons">person</i>
+					<p class="teal-text darken-3">Profile</p>
+				</a>
+			</li>
+			<li><div class="divider teal darken-3"></div></li>
+			<li>
+				<a href="/dashboard/analytics">
+					<i class="teal-text darken-3 material-icons">show_chart</i>
+					<p class="teal-text darken-3">Analytics</p>
+				</a>
+			</li>
+			<li><div class="divider teal darken-3"></div></li>
+			<li>
+				<a href="/dashboard/content">
+					<i class="teal-text darken-3 material-icons">library_books</i>
+					<p class="teal-text darken-3">Content</p>
+				</a>
+			</li>
+			<li><div class="divider teal darken-3"></div></li>
+			<li>
+				<a href="/dashboard/event">
+					<i class="teal-text darken-3 material-icons">event</i>
+					<p class="teal-text darken-3">Event</p>
+				</a>
+			</li>
+			<li><div class="divider teal darken-3"></div></li>
+			<li>
+				<a href="/dashboard/volunteers">
+					<i class="teal-text darken-3 material-icons">people</i>
+					<p class="teal-text darken-3">volunteers</p>
+				</a>
+			</li>
+			<li><div class="divider teal darken-3"></div></li>
+			<li>
+				<a href="/dashboard/settings">
+					<i class="teal-text darken-3 material-icons">settings</i>
+					<p class="teal-text darken-3">Settings</p>
+				</a>
+			</li>
+			<li><div class="divider teal darken-3"></div></li>
+		</ul>
+
+		<div class="container p-9">
+			<p class="white-text">MainMenu/Content</p>
+			<br />
+			<div class="flex flex-row justify-between">
+				<div class="flex justify-center items-center gap-5">
+					<h2 class="white-text text-4xl">My Content</h2>
+					<a class="waves-effect waves-light transparent">
+						<i class="material-icons white-text">sort</i>
+					</a>
+				</div>
+				<button
+					class="btn rounded-full teal-text darken-3 teal accent-1 font-bold waves-effect waves-light"
+				>
+					+ Create Post
+				</button>
+			</div>
+
+			<!-- cards -->
+			<div class="container card-container flex flex-row justify-between mt-9">
+				<div class="card rounded-lg">
+					<div class="card-image waves-effect waves-block waves-light">
+						<i class="material-icons absolute right-0 text-red-600">delete</i>
+						<img
+							class="activator"
+							src="../../images/spotify.png"
+							alt="card image"
+						/>
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4"
+							>Intuitive Eating for Beginners<i class="material-icons right"
+								>more_vert</i
+							></span
+						>
+						<br />
+						<div class="flex justify-between">
+							<span class="grey-text">By ECorg</span>
+							<span class="grey-text">12/12/22</span>
+						</div>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4"
+							>Description<i class="material-icons right">close</i></span
+						>
+						<p>Here is some more information about Eating for Beginners.</p>
+					</div>
+				</div>
+
+				<div class="card rounded-lg">
+					<div class="card-image waves-effect waves-block waves-light">
+						<i class="material-icons absolute right-0 text-red-600">delete</i>
+						<img
+							class="activator"
+							src="../../images/spotify.png"
+							alt="card image"
+						/>
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4"
+							>Intuitive Eating for Beginners<i class="material-icons right"
+								>more_vert</i
+							></span
+						>
+						<br />
+						<div class="flex justify-between">
+							<span class="grey-text">By ECorg</span>
+							<span class="grey-text">12/12/22</span>
+						</div>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4"
+							>Description<i class="material-icons right">close</i></span
+						>
+						<p>Here is some more information about Eating for Beginners.</p>
+					</div>
+				</div>
+
+				<div class="card rounded-lg">
+					<div class="card-image waves-effect waves-block waves-light">
+						<i class="material-icons absolute right-0 text-red-600">delete</i>
+						<img
+							class="activator"
+							src="../../images/spotify.png"
+							alt="card image"
+						/>
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4"
+							>Intuitive Eating for Beginners<i class="material-icons right"
+								>more_vert</i
+							></span
+						>
+						<br />
+						<div class="flex justify-between">
+							<span class="grey-text">By ECorg</span>
+							<span class="grey-text">12/12/22</span>
+						</div>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4"
+							>Description<i class="material-icons right">close</i></span
+						>
+						<p>Here is some more information about Eating for Beginners.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
