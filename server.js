@@ -8,8 +8,13 @@ const path = require("path");
 var app = express();
 var cors = require('cors')
 var port = process.env.PORT || 8080;
+let http = require('http').createServer(app);
+let io = require('socket.io')(http);
+
 
 const MongoClient = require('mongoDb').MongoClient;
+
+
 //Database Connections
 const uri = 'mongodb+srv://group4:group4321@greenlifestylescluster.bvsakmv.mongodb.net/?retryWrites=true&w=majority'
 const client =  new MongoClient(uri,{ useNewUrlParser: true })
@@ -27,7 +32,17 @@ const createCollection = (collectionName) => {
   })
 }
 
+//Socket Connections
 
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+  setInterval(()=>{
+    socket.emit('number', parseInt(Math.random()*10));
+  }, 1000);
+});
 
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -79,7 +94,7 @@ const insertProjects = (project,callback) => {
 //app.listen(port);
 //console.log("Server started at http://localhost:" + port);
 
-app.listen(port,()=>{
+http.listen(port,()=>{
   console.log("Server started at http://localhost:" + port)
   createCollection("users")
 })
