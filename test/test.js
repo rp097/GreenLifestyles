@@ -1,9 +1,14 @@
+//let serv = require('../server.js');
+//var sop = require('../public/js/scripts.js');
 var expect  = require("chai").expect;
 var request = require("request");
 
+
+
+
 describe("Landing Page Test Cases", function() {
     var url = "http://localhost:8080";
-    it("returns status 200 if page loads", function(done) {
+    it("returns status 200 if success", function(done) {
         request(url, function(error, response, body) {
             expect(response.statusCode).to.equal(200);
             done()
@@ -40,3 +45,18 @@ describe("Landing Page Test Cases", function() {
       });
 });*/
   });
+
+  describe("Sign Up Page Test Cases", function() {
+    var url = "http://localhost:8080/signupoptions.html";
+    it("returns status 200 if page loads", function(done) {
+        request(url, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            done()
+          });
+    });
+});
+
+
+
+
+
