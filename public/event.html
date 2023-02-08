@@ -14,7 +14,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-
+    <style>
+      #logout {
+        color: black;
+      }
+    </style>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,7 +47,8 @@
           class="text-gray-600 materialize-textarea"
         />
       </div>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-5">
+        <u><a href="/index.html" id="logout">Log Out</a></u>
         <i class="material-icons teal rounded-lg px-2 py-0 cursor-pointer"
           >notifications</i
         >
