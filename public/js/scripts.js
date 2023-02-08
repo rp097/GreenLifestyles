@@ -34,11 +34,11 @@ const volunteerLoginSubmit = () => {
     $.get('/api/projects/', (response) => {
         //alert("Inside get");
         if (response.statusCode == 200) {
-            //alert("hostloginsubmit- success response callback");
+            //alert("volunteer loginsubmit- success response callback");
             //alert(response.data[0].email);
-            if (response.data.find(x => x.email == volunteerLoginData.email) == undefined)
+            if (response.data.find(y => y.email == volunteerLoginData.email) == undefined)
                 alert("User not found!");
-            else if (response.data.find(x => x.pw == volunteerLoginData.pw) != undefined) {
+            else if (response.data.find(y => y.pw == volunteerLoginData.pw) != undefined) {
                 alert("Login Successful!");
                 window.location = "/index.html";
                 // window.location = "../index.html";
