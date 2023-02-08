@@ -15,7 +15,7 @@ const hostLoginSubmit = () => {
             else if(response.data.find(x=> x.pw == hostLoginData.pw) != undefined)
             {
                 alert("Login Successful!");
-                window.location = "/index.html";
+                window.location = "/content.html";
                // window.location = "../index.html";
                 //window.location = "/public/index.html";
             }  
