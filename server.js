@@ -8,8 +8,8 @@ const path = require("path");
 var app = express();
 var cors = require('cors')
 var port = process.env.PORT || 8080;
-let http = require('http').createServer(app);
-let io = require('socket.io')(http);
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 
 
 const MongoClient = require('mongoDb').MongoClient;
@@ -39,9 +39,9 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
-  setInterval(()=>{
+  /*setInterval(()=>{
     socket.emit('number', parseInt(Math.random()*10));
-  }, 1000);
+  }, 1000);*/
 });
 
 

@@ -1,9 +1,3 @@
-// connect to the socket​
-let socket = io();
-socket.on('number', (msg) => {
-    console.log('Random number: ' + msg);
-})
-
 const hostLoginSubmit = () => {
     let hostLoginData = {};
     hostLoginData.email = $('#hostemail').val();
@@ -97,8 +91,14 @@ const addProjectToApp = (project) => {
     })
 }
 
+// connect to the socket​
+let socket = io();
+socket.on();
+/*'number', (msg) => {
+    console.log('Random number: ' + msg);
+}*/
 
-  $(document).ready(function () {
+$(document).ready(function () {
     $('.materialboxed').materialbox();
     $('#hostFormSubmit').click(() => {
         hostFormSubmit();
@@ -117,3 +117,5 @@ const addProjectToApp = (project) => {
     //getProjects();
     $('.modal').modal();
 });  
+
+
