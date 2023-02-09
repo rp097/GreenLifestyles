@@ -115,6 +115,7 @@ $(document).ready(function () {
         volunteerLoginSubmit();
     });
     //getProjects();
+    hostLoginSubmit();
     $('.modal').modal();
 });  
 
