@@ -42,7 +42,7 @@ If you encounter any issues while using GreenLifestyles, please don't hesitate t
 GreenLifestyles is open-source software that was founded by Emily, Rahul, Lewis and Sangeeth. We welcome contributions from the community. If you would like to contribute to the development of GreenLifestyles, please visit the official GitHub repository for more information.
 
 # License
-We have yet to launch the project officially. However, we will follow the strict software and UP license from Deakin University.
+We have yet to launch the project officially. However, we will follow the strict software and IP license from Deakin University.
 
 # Conclusion
 We hope you enjoy using GreenLifestyles and find it a valuable website that contributes to helping the environment and the communities. Thank you for choosing GreenLifestyles!
