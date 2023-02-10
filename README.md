@@ -10,6 +10,7 @@ Feature 3: Dashboard of Content (The Volunteer can learn sustainable practice th
 Feature 4: Secure data storage to keep your information safe through external third-party software (MongoDB).
 
 # System Requirements
+GitHub Desktop,
 Visual Studio Code,
 MongoDB,
 Windows 7 or later, Mac OS X 10.11 or later,
@@ -18,6 +19,7 @@ Language: JS, CSS, HTML, Node JS
 
 # How to launch our app? 
 Download the GreenLifestyles code from the official GitHub Repo,
+Clone the Repo with GitHub Desktop,
 Open the code through Visual Studio Code,
 Start with npm start (You can start with npm i to initialise the node package),
 Paste the link to a browser,
